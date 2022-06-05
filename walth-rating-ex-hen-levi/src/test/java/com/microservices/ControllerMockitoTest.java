@@ -48,7 +48,6 @@ class ControllerMockitoTest {
 	
 	/*Person controller*/
 	@Test
-	
 	public void test_getAllPersons() throws Throwable {
 		List<Person> allPersons = new ArrayList<Person>();
 		allPersons.add(new Person(999999999, "Hen", "Levi", "Rehovot", (long) 777777777, 4));
@@ -59,8 +58,7 @@ class ControllerMockitoTest {
 		assertEquals(HttpStatus.FOUND, res.getStatusCode());
 	}
 
-	@Test
-	
+	@Test	
 	public void test_getPersonById() throws Throwable {
 		int personId = 555555555;
 		person = new Person(555555555, "Hen", "Levi", "Rehovot", (long) 777777777, 4);
@@ -72,7 +70,6 @@ class ControllerMockitoTest {
 	}
 
 	@Test
-	
 	public void test_getCountryByCity() throws Throwable {
 		person = new Person(555555555, "Hen", "Levi", "Rehovot", (long) 777777777, 4);
 		person = new Person(666666666, "Hana", "Li", "Aco", (long) 88888888, 4);
@@ -85,7 +82,6 @@ class ControllerMockitoTest {
 	
 	/*richPerson controller*/
 	@Test
-	
 	public void test_getAllRichPersons() throws Throwable {
 		List<RichPerson> allRichPersons = new ArrayList<RichPerson>();
 		allRichPersons.add(new RichPerson(999999999,"Hen","Levi",88888888));
@@ -97,7 +93,6 @@ class ControllerMockitoTest {
 	}
 
 	@Test
-
 	public void test_getRichPersonById() throws Throwable {
 		int richpersonId = 555555555;
 		RichPerson richperson = new RichPerson(555555555,"Hen","Levi",7000000);
@@ -110,7 +105,6 @@ class ControllerMockitoTest {
 	
 	/*assets controller*/
 	@Test
-	
 	public void test_getAssetsByCity() {
 		String city = "Rehovot";
 	    int assets=9000;
@@ -121,8 +115,7 @@ class ControllerMockitoTest {
 	}
 	
 	
-	@Test
-	
+	@Test	
 	public void test_getThreshold() {
 	
 		int threshold=1000000000;
