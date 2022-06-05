@@ -46,7 +46,6 @@ class ServiceMockitoTest {
 	/*PersonService*/
 	
 	@Test
-	@Order(1)
 	public void test_getAllPersons() {
 
 		List<Person> allPersons = new ArrayList<Person>();
@@ -60,7 +59,6 @@ class ServiceMockitoTest {
 	}
 
 	@Test
-	@Order(2)
 	public void test_getPersonById() {
 
 		int personId = 555555555;
@@ -72,7 +70,6 @@ class ServiceMockitoTest {
 	}
 
 	@Test
-	@Order(3)
 	public void test_getPersonsByCity() {
 
 		String cityName = "Ashdod";
@@ -88,7 +85,6 @@ class ServiceMockitoTest {
 	/*richPersonService*/
 	
 	@Test
-	@Order(4)
 	public void test_getAllRichPerson() {
 
 		List<RichPerson> allRichPersons = new ArrayList<RichPerson>();
@@ -100,7 +96,6 @@ class ServiceMockitoTest {
 	}
 
 	@Test
-	@Order(5)
 	public void test_getRichPersonById() {
 
 		int richpersonId = 999999999;
