@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservices.services.AssetsService;
 
 @RestController
+@RequestMapping(value = "/central-bank")
 public class AssetsController {
 
 	private static Logger LOG = LoggerFactory.getLogger(AssetsController.class);
@@ -18,7 +19,7 @@ public class AssetsController {
 	@Autowired
 	AssetsService assetsService;
 
-	@GetMapping("/central-bank/regional-info/evaluate/city")
+	@GetMapping("/regional-info/evaluate/city")
 	public ResponseEntity<Integer> getAssetsByCity(@RequestParam(value = "city") String city) {
 		try {
 			int assetsByCity = assetsService.getAssetsByCity(city);
@@ -29,7 +30,7 @@ public class AssetsController {
 		}
 	}
 
-	@GetMapping("/central-bank/wealth-threshold")
+	@GetMapping("/wealth-threshold")
 	public ResponseEntity<Integer> getThreshold() {
 		try {
 			int threshold = assetsService.getThreshold();
